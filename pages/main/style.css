@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+:root {
+  --green: #4B9200;
+  --orange: #F9804B;
+  --hover-orange: #E47209;
+  --yellow: #FFEE2E;
+  --orange-grad: #FED290;
+  --pink-grad: #FEBDAB;
+  --red: #D31414;
+  --black-blue: #333B41;
+  --grey: #767474;
+  --grey-smoky: #ABABAB;
+  --ligth-grey: #F1F3F2;
+  --frosted-glass-white: #FDFDFF;
+}
+
+.header-nav,
+.header-nav-list,
+#header
+/* .action-request */ {
+  display: flex;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+}
+
+.header-nav,
+.header-nav-list li a,
+.author a,
+h1,
+.action-request-btn {
+  color: #fff;
+}
+
+h1,
+.action-request {
+    text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-nav,
+.action-request-btn {
+  font-weight: 500;
+}
+
+.header-nav-list li a:hover,
+.author a:hover {
+  color: var(--orange);
+}
+
+.container {
+  padding: 0 13.75%;
+  box-sizing: border-box;
+}
+
+#header {
+  width: 100vw;
+  height: 780px;
+  background:  url("../../assets/images/Giant Panda.png") center center no-repeat;
+  background-size: cover;
+  justify-content: flex-end;
+}
+
+.header-nav {
+  background-color: #000;
+  justify-content: space-between;
+  height: 80px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header-nav-list li {
+  margin: 29px;
+}
+
+h1 {
+  margin: 12px 0 60px 0;
+  font-size: 114px;
+  line-height: 80px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 100;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  width: 465px;
+  height: 465px;
+  background: var(--orange);
+  border-radius: 50%;
+  bottom: 0;
+  left: -73px;
+  z-index: -1;
+}
+
+h1 span {
+  color: var(--yellow);
+}
+
+.action-request {
+  width: 60%;
+}
+
+.action-request-btn {
+  padding: 15px 74px;
+  border-radius: 25px;
+  background: var(--orange);
+  text-transform: uppercase;
+}
+
+.action-request-btn:hover {
+  background: var(--hover-orange);
+}
+
+.action-request-btn:active {
+  background: var(--green);
+}
+
+.action-request-btn:disabled {
+  background: var(--grey);
+}
