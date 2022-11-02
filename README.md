@@ -1,1 +1,1 @@
-https://github.com/IrynaDesigna/online-zoo/tree/main/pages/main
+https://irynadesigna.github.io/online-zoo/pages/main/
