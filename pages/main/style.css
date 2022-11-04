@@ -504,7 +504,10 @@ input[type="range"]::-webkit-slider-thumb {
   color: var(--grey-smoky);
   height: 309px;
   margin-top: 10px;
+}
 
+.testimonial-text::-webkit-scrollbar {
+  display: none;
 }
 
 .testimonial-wrap:not(.testimonial-wrap:last-child) {
