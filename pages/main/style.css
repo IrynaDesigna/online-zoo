@@ -73,7 +73,9 @@ nav,
 .sns-list,
 .sns-list a,
 .sns-list a img,
-footer .nav  {
+footer .nav,
+.person,
+.person-info>div:nth-child(2)  {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -93,14 +95,17 @@ footer .nav  {
   text-transform: uppercase;
 }
 
+.pets-btn:hover,
 .btn:hover {
   background: var(--hover-orange);
 }
 
+.pets-btn:active,
 .btn:active {
   background: var(--green);
 }
 
+.pets-btn:disabled,
 .btn:disabled {
   background: var(--grey);
 }
@@ -139,7 +144,7 @@ nav {
 }
 
 .nav-list li a.active,
-.nav-list li a:hover {
+.nav-list li a:hover:not(.nav-list li a.logo:hover) {
   color: var(--orange);
 }
 
@@ -151,8 +156,17 @@ h1 {
   text-align: center;
   font-size: 19px;
   font-weight: 400;
+  color: #fff;
   border: 1px #fff solid;
   padding: 4px 5px;
+  display: flex;
+  border-radius: 2px;
+}
+
+h1:hover {
+  color: #fff;
+  border-color: var(--orange);
+  background: var(--orange);
 }
 
 h1 span {
@@ -422,35 +436,75 @@ h1 span::before {
   background: var(--frosted-glass-white);
   position: relative;
   overflow: hidden;
+  font-size: 15px;
+}
+
+.testimonial-range-cover {
+  background: linear-gradient(315.75deg, rgba(254,189,171,0.74) 30.06%, rgba(243,169,248,0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%),linear-gradient(315.75deg, rgba(254,189,171,0.74) 30.06%, rgba(243,169,248,0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
+  height: 8px;
+  border-radius: 4px;
+  margin: 20px 25% 35px;
+  position: relative;
 }
 
 input[type="range"] {
-  width: 50%;
-  height: 8px;
-  background: var(--ligth-grey);
-  margin: 20px 25% 35px;
-
+  width: 100%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  -webkit-appearance: none;
+ appearance: none;
+ background: transparent;
+ cursor: pointer;
 }
 
-.testimonial {
-  border-radius: 20px;
+/* Track Styles */
+/* Chrome, Safari, Opera, and Edge Chromium && Firefox */
+input[type="range"]::-webkit-slider-runnable-track {
   background: var(--ligth-grey);
+  height: 6px;
+  border-radius: 3px;
+}
 
-  overflow-y: scroll;
-  padding: 16px;
-  box-sizing: border-box;
+/* Firefox */
+input[type="range"]::-moz-range-track {
+  background: var(--ligth-grey);
+  height: 6px;
+  border-radius: 3px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 6px;
+  width: 75px;
+  border-radius: 3px;
+  background: var(--orange);
+  cursor: ew-resize;
+  transition: background .3s ease-in-out;
 }
 
 .testimonial-wrap {
   padding: 2px;
   border-radius: 20px;
-  width: 25%;
+  width: 268px;
+  height: 391px;
   background: linear-gradient(315.75deg, rgba(254,189,171,0.74) 30.06%, rgba(243,169,248,0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%),linear-gradient(315.75deg, rgba(254,189,171,0.74) 30.06%, rgba(243,169,248,0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.testimonial {
+  padding: 16px;
+  border-radius: 20px;
+  background: var(--ligth-grey);
 }
 
 .testimonial-text {
-  height: 310px;
-  overflow: hidden;
+  overflow-y: scroll;
+  color: var(--grey-smoky);
+  height: 309px;
+  margin-top: 10px;
+
 }
 
 .testimonial-wrap:not(.testimonial-wrap:last-child) {
@@ -461,6 +515,34 @@ input[type="range"] {
   position: absolute;
   bottom: -130px;
   right: 0;
+}
+
+.person {
+  justify-content: flex-start;
+}
+
+.person-info {
+  margin-left: 10px;
+}
+
+.person-info>div:nth-child(2) {
+  color: #BDBDBD;
+}
+
+.testimonial-date {
+  margin-left: 16px;
+  position: relative;
+}
+
+.testimonial-date::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  top: 8px;
+  left: -8px;
+  background: var(--grey);
+  border-radius: 50%;
 }
 
 /* Footer STYLING */
@@ -517,6 +599,7 @@ h5 {
 
 .sns-list {
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .sns-list a {
@@ -536,12 +619,20 @@ h5 {
   color: var(--green);
 }
 
+.sns-list a:hover > img {
+  background: var(--green);
+}
+
 .sns-list a:hover .sns-list a img {
   background: var(--green);
 }
 
+.footer-nav {
+  align-items: flex-end;
+}
+
 footer .nav {
-  align-self: flex-end;
+  margin-left: 20%;
   color: #fff;
 }
 
