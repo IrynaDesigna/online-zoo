@@ -3,7 +3,7 @@
 
 :root {
   --green: #4B9200;
-  --orange: #F9804B;
+  --orange: #FE9013;
   --hover-orange: #E47209;
   --yellow: #FFEE2E;
   --orange-grad: #FED290;
@@ -57,7 +57,6 @@ h4 {
 }
 
 .nav-screen,
-.nav-small-screen,
 .nav-list,
 .btn,
 .backstage,
@@ -128,71 +127,48 @@ header {
   position: relative;
 }
 
+.nav-container {
+  display: flex;
+}
+
 .nav-screen {
   height: 80px;
   font-weight: 500;
 }
 
-.nav-small-screen {
+.open-nav {
   display: none;
-  z-index: 1001;
-  height: 34px;
-}
-
-#nav-menu {
-  display: none;
-}
-
-[for="nav-menu"] {
-  width: 18px;
-  height: 2px;
-  background: #fff;
-  margin: 2px 0;
+  padding: 2px;
   position: relative;
 }
 
-[for="nav-menu"]::before,
-[for="nav-menu"]::after {
-  content: "";
-  position: absolute;
+.open-nav li {
   width: 18px;
   height: 2px;
-  background: #fff;
-  left: 0;
+  background: var(--ligth-grey);
+  margin: 2px 0;
+  border-radius: 2px;
 }
 
-[for="nav-menu"]::before {
-  top: -4px;
-}
-
-[for="nav-menu"]::after {
-  bottom: -4px;
-}
-
-.small-nav {
+.open-nav.close-nav li:nth-child(2) {
   display: none;
+}
+
+.open-nav.close-nav li:first-child {
+  transform: rotate(-45deg);
   position: absolute;
-  top: 34px;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 1000;
-  padding-top: 50px;
-  background: var(--frosted-glass-white);
-  color: var(--black-blue);
-  padding-left: 30px;
-  flex-direction: column;
+  top: 8px;
+  left: 3px;
 }
 
-.small-nav li {
-  margin: 15px 0;
+.open-nav.close-nav li:last-child {
+  transform: rotate(45deg);
+  position: absolute;
+  top: 8px;
+  left: 3px;
 }
 
-#nav-menu:checked ~ .small-nav {
-  display: flex;
-}
-
-.nav-list li:not(.nav-list li:first-child) {
+.nav-list li {
   margin: 0 30px;
 }
 
@@ -220,6 +196,8 @@ header {
   padding: 4px 5px;
   display: flex;
   border-radius: 2px;
+  display: inline-block;
+  margin-right: 30px;
 }
 
 .logo-box:hover {
@@ -248,10 +226,6 @@ header {
   padding: 12px 0 100px;
   background:  url("../../assets/images/Giant Panda.png") center center no-repeat;
   background-size: cover;
-}
-
-.watch-your-favorite-animal-online-action {
-    width: 50%;
 }
 
 #watch-your-favorite-animal-online h2 {
@@ -820,42 +794,90 @@ footer {
 
 }
 
-@media only screen and (max-width: 999px) {
+@media only screen and (max-width: 1000px) {
 
-  .nav-screen {
+  .small-screen .open-nav {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    border: 2px solid var(--orange);
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+  }
+
+  .small-screen .open-nav li {
+    background: var(--orange);
+  }
+
+  .open-nav {
+    display: block;
+  }
+
+  .nav-list {
     display: none;
   }
 
-  .nav-small-screen {
-    display: flex;
+  .nav-figma-link {
+    display: none;
+    margin-top: 7px;
   }
 
- .nav-small-screen > .logo-box {
-   font-size: 12px;
-   border: none;
- }
+  .nav-screen {
+    height: 34px;
+  }
 
-  .small-nav .logo-box {
-    width: fit-content;
+  .logo-box {
+    border: none;
+    font-size: 12px;
+    padding: 0 3px;
+  }
+
+  .nav-screen.small-screen,
+  .nav-container,
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .nav-screen.small-screen .nav-list li {
+    margin: 7px 0;
+  }
+
+  .nav-screen.small-screen .logo-box {
+    font-size: 19px;
     color: var(--orange);
     border: 1px var(--orange) solid;
+    padding: 4px 5px;
+    border-radius: 2px;
+    margin: 30px 0 7px;
   }
 
-  .small-nav .logo-box span::before {
+  .nav-screen.small-screen .logo-box:hover {
+    color: var(--frosted-glass-white);
+  }
+
+  .nav-screen.small-screen .logo-box span::before {
     background: url("../../assets/images/bamboo-orange.png") center center no-repeat;
   }
 
-  .small-nav .logo-box:hover {
-    color: #fff;
+  /* .nav-list {
+    margin: 0;
+  } */
+
+  .nav-screen.small-screen {
+    background: var(--frosted-glass-white);
+    color: var(--black-blue);
+    height: 100vh;
   }
 
-  .small-nav .logo-box:hover span::before {
-    background: url("../../assets/images/bamboo.png") center center no-repeat;
+  .nav-screen.small-screen .nav-list {
+    display: flex;
   }
 
-  .close-nav {
-    position: absolute;
-
+  .nav-screen.small-screen .nav-figma-link {
+    display: block;
   }
 
   #watch-your-favorite-animal-online {
@@ -866,14 +888,10 @@ footer {
     font-size: 54px;
    }
 
-   .watch-your-favorite-animal-online-action {
-      width: 44%;
-    }
-
     #watch-your-favorite-animal-online h2::before {
       width: 237px;
       height: 237px;
-      left: 0px;
+      left: -47px;
     }
 
     .watch-your-favorite-animal-online-btn {
@@ -881,4 +899,55 @@ footer {
       position: absolute;
       left: 5%;
     }
+
+    .backstage {
+      padding-right: 130px;
+    }
+
+    .backstage-img {
+      display: none;
+    }
+
+    .backstage-bg-img {
+      display: block;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+
+  #watch-your-favorite-animal-online h2 {
+    font-size: 28px;
+  }
+
+  #watch-your-favorite-animal-online h2::before {
+    width: 120px;
+    height: 120px;
+    left: -22px;
+  }
+
+  .watch-your-favorite-animal-online-btn {
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 310px;
+    z-index: 1000;
+  }
+
+  .backstage-bg-img {
+    transform: scale(0.5);
+    top: -124px;
+  }
+
+  h3 {
+    font-size: 1.7em;
+  }
+
+  .backstage-text h3 {
+    margin-bottom: 10px;
+  }
+
+  .backstage-text-subtitle {
+      margin: 20px 0 10px;
+  }
+
 }
