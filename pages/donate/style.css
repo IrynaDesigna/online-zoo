@@ -124,12 +124,25 @@ h3 {
 [name="donate"]::after {
   content: "";
   position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  padding: 20px;
+  z-index: 99;
+}
+
+[name="donate"]::before {
+  content: "";
+  position: absolute;
   top: 0;
   left: 0;
   width: 10px;
   height: 10px;
   background: var(--yellow);
   border-radius: 50%;
+  z-index: 100;
 }
 
 .donate-checkmark {
@@ -140,6 +153,7 @@ h3 {
   position: relative;
   margin-top: -18px;
   visibility: hidden;
+  z-index: 101;
 }
 
 .donate-checkmark::after {
@@ -151,6 +165,7 @@ h3 {
   border: 3px solid var(--orange);
   border-radius: 50%;
   position: absolute;
+  z-index: 102;
 }
 
 [name="donate"]:checked ~ .donate-checkmark {
@@ -173,6 +188,18 @@ input[type="number"] {
   border-radius: 2px;
   color: #929699;
   position: relative;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .dollar {
