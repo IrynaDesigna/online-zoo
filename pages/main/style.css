@@ -1,41 +1,7 @@
+@import "../app/main.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap');
-/* font-family: 'Roboto', sans-serif; */
-
-:root {
-  --green: #4B9200;
-  --orange: #FE9013;
-  --hover-orange: #E47209;
-  --yellow: #FFEE2E;
-  --orange-grad: #FED290;
-  --pink-grad: #FEBDAB;
-  --red: #D31414;
-  --black-blue: #333B41;
-  --grey: #767474;
-  --grey-smoky: #ABABAB;
-  --ligth-grey: #F1F3F2;
-  --frosted-glass-white: #FDFDFF;
-}
 
 /* COMMON STYLES */
-body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1em;
-  color: var(--black-blue);
-}
-
-body, body * {
-  padding: 0;
-  margin: 0;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
 
 h3 {
   font-size: 3em;
@@ -56,9 +22,6 @@ h4 {
   line-height: 1.5;
 }
 
-.nav-screen,
-.nav-list,
-.btn,
 .backstage,
 .watch-your-favorite-animal-online,
 .pet-descr,
@@ -68,11 +31,9 @@ h4 {
 .feed-step-img,
 .testimonials-container,
 .form-container,
-.footer-nav,
 .sns-list,
 .sns-list a,
 .sns-list a img,
-footer .nav,
 .person,
 .person-info>div:nth-child(2)  {
   display: flex;
@@ -80,144 +41,16 @@ footer .nav,
   align-items: center;
 }
 
-.container {
-  max-width: 1160px;
-  margin: 0 auto;
-}
-
-.btn {
-  background: var(--orange);
-  width: 298px;
-  height: 54px;
-  justify-content: center;
-  color: #fff;
-  text-transform: uppercase;
-}
-
-.pets-btn:hover,
-.btn:hover {
+.pets-btn:hover {
   background: var(--hover-orange);
 }
 
-.pets-btn:active,
-.btn:active {
+.pets-btn:active {
   background: var(--green);
 }
 
-.pets-btn:disabled,
-.btn:disabled {
+.pets-btn:disabled {
   background: var(--grey);
-}
-
-.oval-btn {
-  border-radius: 25px;
-}
-
-.rectangle-btn {
-  border-radius: 5px;
-}
-
-/* HEADER STYLING */
-
-header {
-  background: #000;
-  color: #fff;
-  width: 100%;
-  z-index: 1000;
-  position: relative;
-}
-
-.nav-container {
-  display: flex;
-}
-
-.nav-screen {
-  height: 80px;
-  font-weight: 500;
-}
-
-.open-nav {
-  display: none;
-  padding: 2px;
-  position: relative;
-}
-
-.open-nav li {
-  width: 18px;
-  height: 2px;
-  background: var(--ligth-grey);
-  margin: 2px 0;
-  border-radius: 2px;
-}
-
-.open-nav.close-nav li:nth-child(2) {
-  display: none;
-}
-
-.open-nav.close-nav li:first-child {
-  transform: rotate(-45deg);
-  position: absolute;
-  top: 8px;
-  left: 3px;
-}
-
-.open-nav.close-nav li:last-child {
-  transform: rotate(45deg);
-  position: absolute;
-  top: 8px;
-  left: 3px;
-}
-
-.nav-list li {
-  margin: 0 30px;
-}
-
-.nav-list li:first-child {
-  margin-right: 30px;
-}
-
-.nav-list li a.active,
-.nav li a.active,
-.nav li a:hover,
-.nav-list li a:hover:not(.nav-list li a.logo:hover) {
-  color: var(--orange);
-}
-
-.nav-list li a:active {
-  color: var(--green);
-}
-
-.logo-box {
-  text-align: center;
-  font-size: 19px;
-  font-weight: 400;
-  color: #fff;
-  border: 1px #fff solid;
-  padding: 4px 5px;
-  display: flex;
-  border-radius: 2px;
-  display: inline-block;
-  margin-right: 30px;
-}
-
-.logo-box:hover {
-  color: #fff;
-  border-color: var(--orange);
-  background: var(--orange);
-}
-
-.logo-box span {
-  position: relative;
-}
-
-.logo-box span::before {
-  content: "";
-  background: url("../../assets/images/bamboo.png") center center no-repeat;
-  height: 21px;
-  width: 7px;
-  position: absolute;
-  left: -2px;
-  bottom: 3px;
 }
 
 /* Watch your favorite animal online SECTION STYLING */
@@ -412,7 +245,7 @@ header {
 .pick-and-feed {
   background: rgba(253, 253, 255, 0.52);
   border-radius: 20px;
-  padding: 41px 0 59px !important;
+  padding: 40px 0 60px !important;
   box-sizing: border-box;
 }
 
@@ -594,119 +427,12 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 50%;
 }
 
-/* Footer STYLING */
-
-footer {
-  background: #111115;
-  padding: 40px 0 50px;
-}
-
-.form-container  {
-  margin-bottom: 36px;
-}
-
-h5 {
-  font-size: 1.5em;
-  line-height: 1.5;
-  color: #fff;
-  font-weight: 300;
-  margin-bottom: 14px;
-}
-
-.form-container input {
-  width: 228px;
-  height: 42px;
-  border: 1px solid var(--orange);
-  color: #fff;
-  background: #111115;
-  padding: 10px;
-  box-sizing: border-box;
-  border-radius: 2px;
-}
-
-.form-container input::placeholder {
-  color: #fff;
-}
-
-.form-container button {
-  background: #fff;
-  border: 1px solid var(--green);
-  color: var(--green);
-  border-radius: 5px;
-  height: 42px;
-  width: 129px;
-}
-
-.form-container button:hover {
-  background: var(--green);
-  color: #fff;
-}
-
-.footer-donate-btn {
-  margin-bottom: 44px;
-}
-
-.sns-list {
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.sns-list a {
-  margin-bottom: 10px;
-  color: #fff;
-}
-.sns-list a img {
-  object-fit: none;
-  margin-right: 12px;
-  width: 26px;
-  height: 26px;
-  background: var(--black-blue);
-  border-radius: 50px;
-}
-
-.sns-list a:hover {
-  color: var(--green);
-}
-
-.sns-list a:hover > img {
-  background: var(--green);
-}
-
-.sns-list a:hover .sns-list a img {
-  background: var(--green);
-}
-
-.footer-nav {
-  align-items: flex-end;
-}
-
-footer .nav {
-  margin-left: 20%;
-  color: #fff;
-}
-
-footer .active {
-  color: var(--orange);
-}
-
-footer .nav li {
-  margin: 0 28px;
-}
-
-footer {
-  color: #fff;
-  font-weight: 300;
-}
 
 @media only screen and (max-width: 1599px) {
 
   h3 {
     line-height: 1.2;
     font-size: 2.5em;
-  }
-
-  .container {
-      padding: 0 30px;
   }
 
   #watch-your-favorite-animal-online {
@@ -792,93 +518,22 @@ footer {
     display: none;
   }
 
+  #pick-and-feed {
+    padding: 30px;
+  }
+
+  .pick-and-feed {
+    padding: 30px 0 50px !important;
+  }
+
+  .p-and-f {
+    padding: 0 50px;
+  }
+
+
 }
 
 @media only screen and (max-width: 1000px) {
-
-  .small-screen .open-nav {
-    position: absolute;
-    top: 30px;
-    right: 20px;
-    border: 2px solid var(--orange);
-    width: 20px;
-    height: 20px;
-    border-radius: 2px;
-  }
-
-  .small-screen .open-nav li {
-    background: var(--orange);
-  }
-
-  .open-nav {
-    display: block;
-  }
-
-  .nav-list {
-    display: none;
-  }
-
-  .nav-figma-link {
-    display: none;
-    margin-top: 7px;
-  }
-
-  .nav-screen {
-    height: 34px;
-  }
-
-  .logo-box {
-    border: none;
-    font-size: 12px;
-    padding: 0 3px;
-  }
-
-  .nav-screen.small-screen,
-  .nav-container,
-  .nav-list {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-
-  .nav-screen.small-screen .nav-list li {
-    margin: 7px 0;
-  }
-
-  .nav-screen.small-screen .logo-box {
-    font-size: 19px;
-    color: var(--orange);
-    border: 1px var(--orange) solid;
-    padding: 4px 5px;
-    border-radius: 2px;
-    margin: 30px 0 7px;
-  }
-
-  .nav-screen.small-screen .logo-box:hover {
-    color: var(--frosted-glass-white);
-  }
-
-  .nav-screen.small-screen .logo-box span::before {
-    background: url("../../assets/images/bamboo-orange.png") center center no-repeat;
-  }
-
-  /* .nav-list {
-    margin: 0;
-  } */
-
-  .nav-screen.small-screen {
-    background: var(--frosted-glass-white);
-    color: var(--black-blue);
-    height: 100vh;
-  }
-
-  .nav-screen.small-screen .nav-list {
-    display: flex;
-  }
-
-  .nav-screen.small-screen .nav-figma-link {
-    display: block;
-  }
 
   #watch-your-favorite-animal-online {
     margin-top: -10px;
@@ -911,6 +566,26 @@ footer {
     .backstage-bg-img {
       display: block;
     }
+
+    .pets {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .pet:last-child,
+    .pet:nth-child(5) {
+      display: none;
+    }
+
+    #pick-and-feed {
+      padding: 20px 0;
+    }
+
+    .p-and-f {
+      padding: 0 20px;
+    }
+
+
+
 }
 
 @media only screen and (max-width: 640px) {
@@ -949,5 +624,54 @@ footer {
   .backstage-text-subtitle {
       margin: 20px 0 10px;
   }
+
+  .pets {
+    grid-template-columns: 1fr;
+    row-gap: 0;
+  }
+
+  .pets-btn {
+    display: none;
+  }
+
+  .pet-descr {
+    font-size: 11px;
+  }
+
+  .pet-icon {
+    max-width: 24px;
+  }
+
+  .backstage-text {
+    padding-left: 0;
+  }
+
+  .backstage {
+    padding-right: 10px;
+  }
+
+  .backstage-text h3,
+  .backstage-text p:first-of-type {
+    padding-rigth: 30px;
+  }
+
+  .pets-bg-imgs img:last-child {
+    bottom: -82px;
+    right: -112px;
+    transform: scale(0.4);
+  }
+
+  .pets-bg-imgs img:first-child {
+    bottom: -138px;
+    left: -100px;
+    transform: scale(0.4);
+  }
+
+  .btn-choose-your-faivourite {
+    margin-top: 0;
+  }
+
+
+
 
 }

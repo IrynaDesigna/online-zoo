@@ -1,3 +1,5 @@
+@import "../app/main.css";
+
 .banner {
   background:  url("../../assets/images/Giant Panda.png") center center no-repeat;
   background-size: cover;
@@ -261,4 +263,17 @@ input[name="frequency"] {
 
 input[name="frequency"]:checked ~ .frequency-checked::after {
   display: block;
+}
+
+
+@media only screen and (max-width: 1599px) {
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+}
+
+@media only screen and (max-width: 640px) {
+
 }
