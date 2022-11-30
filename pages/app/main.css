@@ -192,6 +192,35 @@ footer {
   padding: 40px 0 50px;
 }
 
+.logo-footer {
+  width: 80px;
+  height: 50px;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  padding: 5px 5px 10px 5px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.logo-footer:hover {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.logo-footer span {
+  position: relative;
+}
+
+.logo-footer span::before {
+  content: "";
+  background: url("../../assets/images/bamboo.png") center center no-repeat;
+  height: 21px;
+  width: 7px;
+  position: absolute;
+  left: -52px;
+  bottom: 1px;
+}
+
 .form-container  {
   margin-bottom: 36px;
 }
@@ -238,6 +267,7 @@ h5 {
 }
 
 .sns-list {
+  display: flex;
   flex-direction: column;
   align-items: flex-start !important;
 }
@@ -384,12 +414,40 @@ footer {
     display: block;
   }
 
+  footer {
+    position: relative;
+    padding: 12px 20px;
+  }
+
+  footer .container {
+    padding: 0;
+  }
+
+  .sns-list {
+    position: absolute;
+    top: 12px;
+    right: 8px;
+  }
+
+  .sns-list span {
+    display: none;
+  }
+
+  .sns-list a {
+    margin-bottom: 20px;
+  }
+
   #subsribe {
     display: none;
   }
 
-  .footer-donate-btn {
+   .rectangle-btn.footer-donate-btn {
     margin: 0;
+  }
+
+  footer .nav {
+    margin-left: 0;
+    margin-top: 67px;
   }
 
 }
@@ -400,7 +458,40 @@ footer {
       padding: 0 10px;
   }
 
+  .logo-footer {
+    font-weight: 400;
+    border: none;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin-top: 8px;
+  }
 
+  .logo-footer:hover {
+    background: none;
+    border: none;
+    font-weight: 700;
+  }
+
+  .form-container {
+    margin-bottom: 84px;
+  }
+
+  .rectangle-btn.footer-donate-btn {
+    margin: 0 auto;
+  }
+
+  .sns-list {
+    flex-direction: row;
+    right: 0;
+    left: 0;
+    justify-content: center !important;
+    top: 70px;
+  }
+
+  .sns-list a {
+    margin: 0 15px;
+  }
 
 
 }
