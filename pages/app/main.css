@@ -31,6 +31,21 @@ body, body * {
   margin: 0 auto;
 }
 
+h3 {
+  font-size: 3em;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h4 {
+  font-size: 36px;
+  line-height: 1.5;
+  margin: 60px 0 40px;
+  text-align: center;
+  font-weight: 400;
+}
+
+
 ul {
   list-style: none;
 }
@@ -43,6 +58,10 @@ a {
 .nav-screen,
 .nav-list,
 .btn,
+.form-container,
+.sns-list,
+.sns-list a,
+.sns-list a img,
 .footer-nav,
 footer .nav {
   display: flex;
@@ -414,6 +433,11 @@ footer {
     display: block;
   }
 
+  .rectangle-btn {
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+
   footer {
     position: relative;
     padding: 12px 20px;
@@ -477,8 +501,16 @@ footer {
     margin-bottom: 84px;
   }
 
+  .rectangle-btn {
+    margin-top: 15px;
+  }
+
   .rectangle-btn.footer-donate-btn {
     margin: 0 auto;
+  }
+
+  footer {
+    padding: 12px 0;
   }
 
   .sns-list {
@@ -493,5 +525,23 @@ footer {
     margin: 0 15px;
   }
 
+  .footer-nav {
+    flex-direction: column;
+  }
+
+  .author {
+    order: 1;
+    margin-top: 30px;
+    margin-right: 15px;
+  }
+
+  footer .nav {
+    order: 2;
+    margin-top: 30px;
+  }
+
+  footer .nav li {
+    margin: 0 15px;
+  }
 
 }

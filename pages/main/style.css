@@ -3,20 +3,6 @@
 
 /* COMMON STYLES */
 
-h3 {
-  font-size: 3em;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-h4 {
-  font-size: 36px;
-  line-height: 1.5;
-  margin: 60px 0 40px;
-  text-align: center;
-  font-weight: 400;
-}
-
 .subtitle {
   font-size: 1.5em;
   line-height: 1.5;
@@ -30,10 +16,6 @@ h4 {
 .feed-steps,
 .feed-step-img,
 .testimonials-container,
-.form-container,
-.sns-list,
-.sns-list a,
-.sns-list a img,
 .person,
 .person-info>div:nth-child(2)  {
   display: flex;
@@ -539,6 +521,15 @@ input[type="range"]::-webkit-slider-thumb {
     padding: 0 50px;
   }
 
+  .subtitle {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .p-and-f p {
+    display: none;
+  }
+
 
 }
 
@@ -566,6 +557,7 @@ input[type="range"]::-webkit-slider-thumb {
 
     .backstage {
       padding-right: 130px;
+      margin-bottom: 40px;
     }
 
     .backstage-img {
@@ -668,11 +660,6 @@ input[type="range"]::-webkit-slider-thumb {
       width: 240px;
     }
 
-    .rectangle-btn {
-      margin: 0 auto;
-      margin-top: 25px;
-    }
-
 }
 
 @media only screen and (max-width: 640px) {
@@ -692,7 +679,7 @@ input[type="range"]::-webkit-slider-thumb {
     left: 0;
     right: 0;
     top: 310px;
-    z-index: 1000;
+    z-index: 500;
   }
 
   .backstage-bg-img {
@@ -710,6 +697,7 @@ input[type="range"]::-webkit-slider-thumb {
 
   .backstage-text-subtitle {
       margin: 20px 0 10px;
+      text-align: left;
   }
 
   .pets {
@@ -735,6 +723,7 @@ input[type="range"]::-webkit-slider-thumb {
 
   .backstage {
     padding-right: 10px;
+    margin-bottom: 40px;
   }
 
   .backstage-text h3,
@@ -808,28 +797,6 @@ input[type="range"]::-webkit-slider-thumb {
     bottom: -192px;
     right: -88px;
     transform: scale(0.3);
-  }
-
-  .rectangle-btn {
-    margin-top: 15px;
-  }
-
-  .footer-nav {
-    flex-direction: column;
-  }
-
-  .author {
-    order: 1;
-    margin-top: 30px;
-  }
-
-  footer .nav {
-    order: 2;
-    margin-top: 30px;
-  }
-
-  footer .nav li {
-    margin: 0 15px;
   }
 
 }

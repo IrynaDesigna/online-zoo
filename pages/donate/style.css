@@ -4,7 +4,6 @@
   background:  url("../../assets/images/Giant Panda.png") center center no-repeat;
   background-size: cover;
   height: 390px;
-  margin-top: 80px;
 }
 
 main {
@@ -15,6 +14,24 @@ main {
 h3 {
   font-size: 2.25em;
 }
+
+.pick-and-feed {
+  background: rgba(253, 253, 255, 0.52);
+  border-radius: 20px;
+  padding: 40px 65px 60px !important;
+  box-sizing: border-box;
+}
+
+.pick-and-feed h3 {
+  color: var(--orange);
+  text-align: center;
+}
+
+.pick-and-feed a:hover {
+  color: var(--orange);
+}
+
+
 
 .donate-header {
   color: #FFF;
@@ -267,13 +284,70 @@ input[name="frequency"]:checked ~ .frequency-checked::after {
 
 
 @media only screen and (max-width: 1599px) {
+  .pick-and-feed {
+    padding: 30px 0 !important;
+  }
+
+  label[for="5000"] {
+    display: none;
+  }
 
 }
 
 @media only screen and (max-width: 1000px) {
+  .container {
+    padding: 0 20px
+  }
+
+  .donate-info {
+    margin: 30px 0;
+  }
+
+  h3 {
+    font-size: 2em;
+    line-height: 1.2;
+  }
+
+  .pick-and-feed-header {
+    font-size: 2em;
+  }
+
+  label[for="2000"],
+  label[for="1000"] {
+    display: none;
+  }
+
 
 }
 
 @media only screen and (max-width: 640px) {
 
+  h3,
+  .pick-and-feed-header {
+    font-size: 1.5em;
+  }
+
+  .pick-and-feed-header ~ p:first-of-type {
+    font-size: 1em;
+  }
+
+  .container {
+    padding: 0 10px
+  }
+
+  .panda {
+    width: 160px;
+  }
+
+  .four {
+    font-size: 3em;
+  }
+
+  .four ~ div {
+    font-size: 11px;
+  }
+
+  [alt="x_icon"] {
+      margin: 0 30px 0 11px;
+  }
 }
