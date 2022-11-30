@@ -278,6 +278,10 @@ h4 {
 
 .feed-step {
   width: 168px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .feed-step-img {
@@ -289,6 +293,7 @@ h4 {
   justify-content: center;
   margin-bottom: 30px;
 }
+
 
 .pick-and-feed a {
   text-decoration: underline;
@@ -302,6 +307,9 @@ h4 {
 
 .step-arrow {
   margin-bottom: 70px;
+  height: 35px;
+  width: 70px;
+  background: url("../../assets/images/pick-and-feed-arrow.png") center center no-repeat;
 }
 
 .feed-a-friend-btn {
@@ -584,7 +592,35 @@ input[type="range"]::-webkit-slider-thumb {
       padding: 0 20px;
     }
 
+    .feed-steps {
+      justify-content: center;
+      align-items: flex-start;
+    }
 
+    .feed-step {
+      width: 118px;
+      position: relative;
+    }
+
+    .feed-step:not(.feed-step:last-child) {
+      margin-right: 40px;
+    }
+
+    .feed-step:not(.feed-step:last-child)::after {
+      content: "";
+      background: url("../../assets/images/green-arrow.png") center center no-repeat;
+      width: 64px;
+      height: 70px;
+      position: absolute;
+      top: -40px;
+      right: -50px;
+      background-size: contain;
+      z-index: 1000;
+    }
+
+    .step-arrow {
+      display: none;
+    }
 
 }
 
@@ -671,7 +707,42 @@ input[type="range"]::-webkit-slider-thumb {
     margin-top: 0;
   }
 
+  .feed-steps {
+    align-items: center;
+    flex-direction: column;
+  }
 
+  .feed-step {
+    width: 168px;
+    position: relative;
+  }
+
+  .feed-step-img {
+    width: 168px;
+    height: 168px;
+    margin-bottom: 0;
+  }
+
+  .feed-step:not(.feed-step:last-child) {
+    margin-right: 0;
+  }
+
+  .feed-step:not(.feed-step:last-child)::after {
+    width: 64px;
+    height: 70px;
+    top: auto;
+    right: -47px;
+    bottom: -6px;
+    transform: rotate(90deg);
+  }
+
+  .pick-and-feed p {
+      margin: 10px 0 30px;
+  }
+
+  .feed-a-friend-btn {
+    margin: 0 auto;
+  }
 
 
 }
