@@ -239,7 +239,7 @@ h5 {
 
 .sns-list {
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-start !important;
 }
 
 .sns-list a {
@@ -382,6 +382,14 @@ footer {
 
   .nav-screen.small-screen .nav-figma-link {
     display: block;
+  }
+
+  #subsribe {
+    display: none;
+  }
+
+  .footer-donate-btn {
+    margin: 0;
   }
 
 }
