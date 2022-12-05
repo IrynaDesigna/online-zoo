@@ -355,13 +355,14 @@ footer {
   /* NAVIGATION --------------- */
 
   .small-screen .open-nav {
-    position: absolute;
+    position: fixed;
     top: 30px;
     right: 20px;
     border: 2px solid var(--orange);
     width: 20px;
     height: 20px;
     border-radius: 2px;
+    z-index: 1000;
   }
 
   .small-screen .open-nav li {
@@ -424,6 +425,11 @@ footer {
     background: var(--frosted-glass-white);
     color: var(--black-blue);
     height: 100vh;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    z-index: 500;
   }
 
   .nav-screen.small-screen .nav-list {
