@@ -577,9 +577,9 @@ input[type="range"]::-webkit-slider-thumb {
 
     .backstage-bg-img {
       display: block;
-      top: -35px;
+      top: -50px;
       right: -47px;
-      transform: scale(0.85);
+      transform: scale(0.8);
     }
 
     .pets {
