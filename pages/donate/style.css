@@ -320,7 +320,7 @@ input[name="frequency"]:checked ~ .frequency-checked::after {
 
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 639px) {
 
   h3,
   .pick-and-feed-header {

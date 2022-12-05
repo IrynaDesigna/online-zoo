@@ -533,7 +533,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 999px) {
 
   #watch-your-favorite-animal-online {
     margin-top: -10px;
@@ -662,7 +662,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 639px) {
 
   #watch-your-favorite-animal-online h2 {
     font-size: 28px;
