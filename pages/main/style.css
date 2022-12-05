@@ -91,7 +91,7 @@
 #backstage {
   position: relative;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .backstage-bg-img {
@@ -567,6 +567,8 @@ input[type="range"]::-webkit-slider-thumb {
     .backstage {
       padding-right: 130px;
       margin-bottom: 40px;
+      margin-top: 60px;
+      margin-bottom: 80px;
     }
 
     .backstage-img {
@@ -575,6 +577,9 @@ input[type="range"]::-webkit-slider-thumb {
 
     .backstage-bg-img {
       display: block;
+      top: -35px;
+      right: -47px;
+      transform: scale(0.85);
     }
 
     .pets {
@@ -698,6 +703,7 @@ input[type="range"]::-webkit-slider-thumb {
   .backstage-bg-img {
     transform: scale(0.5);
     top: -124px;
+    right: -97px;
   }
 
   h3 {
@@ -737,6 +743,7 @@ input[type="range"]::-webkit-slider-thumb {
   .backstage {
     padding-right: 10px;
     margin-bottom: 40px;
+    margin-top: 104px;
   }
 
   .backstage-text h3,
