@@ -441,6 +441,10 @@ input[type="range"]::-webkit-slider-thumb {
      left: -34px;
    }
 
+   .watch-your-favorite-animal-online {
+     padding-right: 85px;
+   }
+
    .backstage-bg-img {
      display: none;
    }
@@ -547,6 +551,10 @@ input[type="range"]::-webkit-slider-thumb {
       width: 237px;
       height: 237px;
       left: -47px;
+    }
+
+    .watch-your-favorite-animal-online {
+      padding-right: 15px;
     }
 
     .watch-your-favorite-animal-online-btn {
