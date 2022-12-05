@@ -207,8 +207,9 @@
 
 .pets-bg-imgs img:first-child {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 50px;
+  left: -20px;
+  transform: scale(2);
 }
 
 .pets-bg-imgs img:last-child {
@@ -484,9 +485,9 @@ input[type="range"]::-webkit-slider-thumb {
    }
 
   .pets-bg-imgs img:first-child {
-    bottom: -115px;
-    left: -74px;
-    transform: scale(0.5);
+    bottom: 0;
+    left: 0;
+    transform: scale(1);
   }
 
   .pets-bg-imgs img:last-child {
@@ -583,6 +584,10 @@ input[type="range"]::-webkit-slider-thumb {
     .pet:last-child,
     .pet:nth-child(5) {
       display: none;
+    }
+
+    .pets-bg-imgs img:first-child {
+      left: -62px;
     }
 
     #pick-and-feed {
@@ -740,15 +745,15 @@ input[type="range"]::-webkit-slider-thumb {
   }
 
   .pets-bg-imgs img:last-child {
-    bottom: -82px;
-    right: -112px;
+    bottom: -84px;
+    right: -142px;
     transform: scale(0.4);
   }
 
   .pets-bg-imgs img:first-child {
-    bottom: -138px;
-    left: -100px;
-    transform: scale(0.4);
+    bottom: -54px;
+    left: -65px;
+    transform: scale(0.6);
   }
 
   .btn-choose-your-faivourite {
