@@ -384,7 +384,7 @@ input[type="range"]::-webkit-slider-thumb {
   grid-gap: 30px;
   grid-auto-flow: column;
   max-width: 1160px;
-  overflow-x: scroll;
+  overflow: hidden;
   margin: auto;
 }
 
