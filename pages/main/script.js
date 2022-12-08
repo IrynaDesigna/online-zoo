@@ -65,22 +65,25 @@ window.addEventListener("resize", e => (width = carousel.offsetWidth));
 
 
 
+  let position = range.value;
+  console.log(position);
 
   var rangeScroll = function(){
-    let position = range.value;
     console.log(position);
 
-    let scrollwidth = ((testimonialWrapWidth*num) + ((num-1) * gap))/8;
 
-    testimonialsContainer.scrollBy(scrollwidth, 0);
+    let scrollwidth = ( (testimonialWrapWidth*num) + ((num-1) * gap) )/8;
 
-    // if (position < range.value) {
-    //   testimonialsContainer.scrollBy(scrollwidth, 0);
-    // } else if (position >= range.value){
-    //   testimonialsContainer.scrollBy(-scrollwidth, 0);
-    // }
+    if (position < range.value) {
+      testimonialsContainer.scrollBy(scrollwidth, 0);
+    }
 
+    if (position > range.value){
+      testimonialsContainer.scrollBy(0-scrollwidth, 0);
+    }
 
+    position = range.value;
+    console.log(position);
 
   }
 
