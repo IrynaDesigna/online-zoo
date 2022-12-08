@@ -20,7 +20,7 @@
     this.classList.toggle('open');
   }
 
-  function popCloseFn() {
+  function popCloseFn() {s
     this.parentElement.classList.add('open');
   }
 
