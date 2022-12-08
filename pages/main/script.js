@@ -1,20 +1,33 @@
-// ;(function () {
-//   "use strict";
-//
-// const pets = document.getElementsByClassName('pet');
-//
-// console.log(pets);
-//
-// if (window.innerWidth >= 1000) {
-//   for (let pet in pets) {
-//     pets[6].style.display = "none";
-//     pets[7].style.display = "none";
-//
-//   }
-// }
-//
-//
-// })();
+;(function () {
+  "use strict";
+
+  const popOpen = document.getElementsByClassName('pop-wrap'),
+        closePop = document.getElementsByClassName('pop-close-btn');
+
+  if (window.innerWidth < 1000) {
+    for (let i = 0; i < popOpen.length; i++) {
+      popOpen[i].addEventListener('click', popOpenFn);
+    }
+  }
+
+  if (window.innerWidth < 1000) {
+    for (let i = 0; i < closePop.length; i++) {
+      closePop[i].addEventListener('click', popCloseFn);
+    }
+  }
+
+  function popOpenFn() {
+    this.classList.toggle('open');
+  }
+
+  function popCloseFn() {
+    this.parentElement.classList.add('open');
+  }
+
+
+
+
+})();
 
 
 const gap = 29;

@@ -153,7 +153,7 @@
   border-radius: 5px;
   margin-bottom: 20px;
   position: relative;
-  width: 365px;
+  width: 364px;
 }
 
 .pet-img {
@@ -377,13 +377,14 @@ input[type="range"]::-webkit-slider-thumb {
   background: var(--orange);
   cursor: ew-resize;
   transition: background .3s ease-in-out;
+  cursor: pointer;
 }
 
 .testimonial-wrap {
   padding: 2px;
   border-radius: 20px;
   width: 268px;
-  height: 390px;
+  /* height: 390px; */
   background: linear-gradient(315.75deg, rgba(254,189,171,0.74) 30.06%, rgba(243,169,248,0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%),linear-gradient(315.75deg, rgba(254,189,171,0.74) 30.06%, rgba(243,169,248,0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
   box-sizing: border-box;
   overflow: hidden;
@@ -443,6 +444,10 @@ input[type="range"]::-webkit-slider-thumb {
   left: -8px;
   background: var(--grey);
   border-radius: 50%;
+}
+
+.pop-close-btn {
+  display: none;
 }
 
 
@@ -545,9 +550,9 @@ input[type="range"]::-webkit-slider-thumb {
     max-width: 85%;
   }
 
-  .testimonial-wrap:nth-child(4) {
+  /* .testimonial-wrap:nth-child(4) {
     display: none;
-  }
+  } */
 
   #pick-and-feed {
     padding: 30px;
@@ -715,6 +720,8 @@ input[type="range"]::-webkit-slider-thumb {
       max-height: 38px;
     }
 
+    .pop-wrap.open .testimonial-text
+
     .testimonial-range-cover {
       display: none;
     }
@@ -729,6 +736,55 @@ input[type="range"]::-webkit-slider-thumb {
       width: 240px;
     }
 
+    .pop-wrap.open {
+      position: fixed;
+      background: #fff;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 20px 36px 17px 17px;
+      z-index: 999;
+      box-sizing: border-box;
+    }
+
+    .pop-wrap.open .testimonial-wrap,
+    .pop-wrap.open .testimonial {
+      height: 100%;
+    }
+
+    .pop-close-btn {
+      width: 14px;
+      height: 14px;
+      position: fixed;
+      top: 12px;
+      right: 10px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .pop-wrap.open .pop-close-btn {
+      display: block;
+    }
+
+    .one,
+    .two {
+      content: "";
+      position: absolute;
+      top: 7px;
+      right: 0;
+      width: 14px;
+      height: 1px;
+      background: var(--orange);
+    }
+
+    .one {
+      transform: rotate(45deg);
+    }
+
+    .two {
+      transform: rotate(-45deg);
+    }
 }
 
 @media only screen and (max-width: 639px) {
