@@ -1,36 +1,8 @@
 ;(function () {
   "use strict";
 
-  const popOpen = document.getElementsByClassName('pop-wrap'),
-        closePop = document.getElementsByClassName('pop-close-btn');
-
-  if (window.innerWidth < 1000) {
-    for (let i = 0; i < popOpen.length; i++) {
-      popOpen[i].addEventListener('click', popOpenFn);
-    }
-  }
-
-  if (window.innerWidth < 1000) {
-    for (let i = 0; i < closePop.length; i++) {
-      closePop[i].addEventListener('click', popCloseFn);
-    }
-  }
-
-  function popOpenFn() {
-    this.classList.toggle('open');
-  }
-
-  function popCloseFn() {s
-    this.parentElement.classList.add('open');
-  }
-
-
-
-
-})();
-
-
-const gap = 29;
+// PETS slider
+const gap = 26;
 
 const carousel = document.getElementById("carousel"),
   content = document.getElementById("content"),
@@ -58,3 +30,66 @@ prev.addEventListener("click", e => {
 
 let width = carousel.offsetWidth;
 window.addEventListener("resize", e => (width = carousel.offsetWidth));
+
+
+// POPUP
+  const popOpen = document.getElementsByClassName('pop-wrap'),
+        closePop = document.getElementsByClassName('pop-close-btn');
+
+  if (window.innerWidth < 1000) {
+    for (let i = 0; i < popOpen.length; i++) {
+      popOpen[i].addEventListener('click', popOpenFn);
+    }
+  }
+
+  if (window.innerWidth < 1000) {
+    for (let i = 0; i < closePop.length; i++) {
+      closePop[i].addEventListener('click', popCloseFn);
+    }
+  }
+
+  function popOpenFn() {
+    this.classList.toggle('open');
+  }
+
+  function popCloseFn() {
+    this.parentElement.classList.add('open');
+  }
+
+  // Testimonials scroll
+
+  const range = document.querySelector('input[type="range"]'),
+        num = document.getElementsByClassName('testimonial').length,
+        testimonialsContainer = document.getElementById('testimonials-container'),
+        testimonialWrap = document.getElementById('testimonial-wrap');
+
+
+
+
+  var rangeScroll = function(){
+    let position = range.value;
+    console.log(position);
+
+    let scrollwidth = ((testimonialWrapWidth*num) + ((num-1) * gap))/8;
+
+    testimonialsContainer.scrollBy(scrollwidth, 0);
+
+    // if (position < range.value) {
+    //   testimonialsContainer.scrollBy(scrollwidth, 0);
+    // } else if (position >= range.value){
+    //   testimonialsContainer.scrollBy(-scrollwidth, 0);
+    // }
+
+
+
+  }
+
+  let testimonialWrapWidth = testimonialWrap.offsetWidth;
+  window.addEventListener("resize", e => (testimonialWrapWidth = testimonialWrap.offsetWidth));
+
+  range.addEventListener("input", rangeScroll);
+
+
+
+
+})();
